@@ -16,7 +16,7 @@ jobs:
         run: echo "🐧 This job is running on a ${{ runner.os }} server hosted by GitHub!"
 
       - name: Display Branch and Repository Info
-        run: echo "🔎 Branch: ${{ github.ref }}, Repository: ${{ github.repository }}."
+        run: echo "🔎 Branch ${{ github.ref }}, Repository ${{ github.repository }}."
 
       - name: Checkout Repository Code
         uses: actions/checkout@v2
