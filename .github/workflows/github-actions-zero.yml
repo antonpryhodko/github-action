@@ -10,26 +10,23 @@ jobs:
 
     steps:
       - name: Show Trigger Event 
-        run: echo "🎉 This job was triggered by a ${{ github.event_name }} event."
+        run: echo "This job was triggered by a ${{ github.event_name }} event."
 
       - name: Display OS Info
-        run: echo "🐧 This job is running on a ${{ runner.os }} server hosted by GitHub!"
+        run: echo "Environment information ${{ runner.os }}"
 
       - name: Display Branch and Repository Info
-        run: echo "🔎 Branch ${{ github.ref }}, Repository ${{ github.repository }}."
+        run: echo "Current Branch ${{ github.ref }}, Repository Info ${{ github.repository }}."
 
       - name: Checkout Repository Code
         uses: actions/checkout@v2
 
-      - name: Display Cloning Status
-        run: echo "💡 The ${{ github.repository }} repository has been cloned."
-
-      - name: Prepare for Testing
-        run: echo "🖥️ The workflow is ready to test your code on the runner."
+      - name: Display Checkout Status
+        run: echo "The ${{ github.repository }} was checkouted."
 
       - name: List Repository Files
         run: |
           ls ${{ github.workspace }}
 
-      - name: Display Job Status
-        run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Job result
+        run: echo "Job result is ${{ job.status }}."
